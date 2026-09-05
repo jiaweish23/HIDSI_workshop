@@ -1,0 +1,13 @@
+# --- large checkpoint: distributed via a GitHub Release, not committed ---
+# GitHub rejects files > 100 MB; LDM_ema.pt is ~1.5 GB.  Fetch it after cloning
+# with ./download_checkpoint.sh  (see README).
+checkpoints/LDM_ema.pt
+
+# --- python / jupyter cruft ---
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.log
+
+# --- os / editor ---
+.DS_Store

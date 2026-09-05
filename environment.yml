@@ -1,0 +1,28 @@
+# SCIPE workshop environment.
+#   module load lang/Anaconda3
+#   conda env create -f environment.yml      # creates env "scipe-ldm"
+#   conda activate scipe-ldm
+#
+# Pinned to the versions the pretrained checkpoints were produced/tested with
+# (PyTorch 1.13.1 / CUDA 11.6).  On a GPU node these give reproducible results;
+# on a CPU-only laptop, swap `pytorch-cuda`/`cudatoolkit` for the CPU build.
+name: scipe-ldm
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch=1.13.1
+  - torchvision
+  - cudatoolkit=11.6
+  - numpy=1.23.5
+  - scipy=1.10.0
+  - scikit-image=0.19.3
+  - matplotlib=3.8.2
+  - einops=0.6.0
+  - pyyaml
+  - jupyterlab
+  - ipywidgets
+  - pip
+  - pip:
+      - porespy==2.3.0

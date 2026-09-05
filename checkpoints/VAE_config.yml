@@ -1,0 +1,31 @@
+Downsample_type: Stride Convolution
+Load_Model: false
+Load_Model_Name: ''
+batchsize: 32
+binarize_threshold: 0.2
+channels: 1
+config: configs/3d_vae_binfromtudf.yml
+data_path: ./data/3D_binary_gt50_10000.npy
+device: cuda:1
+dim: 96
+dim_mults:
+- 1
+- 2
+embedding: true
+epochs: 600
+flatten: false
+image_size: 32
+kld_weight: 0.0001
+latent_channels: 1
+latent_dim: 256
+loss_type: tversky
+lr: 0.0001
+model_name: UnetVAE
+ndim: 3
+output_activation: Sigmoid
+output_dir: runs/3d_vae_binfromtudf
+raw: false
+save_every_epoch: 100
+seed: 101
+tversky_alpha: 0.3
+tversky_beta: 0.7
