@@ -13,7 +13,7 @@
 set -euo pipefail
 
 # ---- EDIT THESE TWO to match where you upload the release asset -------------
-REPO="${REPO:-YOUR_GITHUB_USER/SCIPE_workshop}"   # e.g. jsmith/SCIPE_workshop
+REPO="${REPO:-jiaweish23/HIDSI_workshop}"         # override with REPO=... if you fork
 TAG="${TAG:-checkpoints}"                          # the Release tag holding the asset
 # -----------------------------------------------------------------------------
 ASSET="LDM_ema.pt"

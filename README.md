@@ -11,7 +11,7 @@ research repository.
 
 ## Folder layout
 ```
-SCIPE_workshop/
+HIDSI_workshop/
 ├── workshop_3d_ldm.ipynb     # the workshop (9 sections; run top-to-bottom)
 ├── scipe_helpers.py          # self-contained load / condition / generate / eval helpers
 ├── models/                   # copied model code (VAE, diffusion UNet, CondEncoder, EDM sampler)
@@ -30,8 +30,8 @@ SCIPE_workshop/
 
 ## Setup on Koa
 ```bash
-git clone https://github.com/YOUR_GITHUB_USER/SCIPE_workshop.git
-cd SCIPE_workshop
+git clone https://github.com/jiaweish23/HIDSI_workshop.git
+cd HIDSI_workshop
 
 # 1. get the large diffusion checkpoint (1.5 GB) — it is NOT in the repo,
 #    it lives as a GitHub Release asset (see "Notes on the large checkpoint")
@@ -43,8 +43,8 @@ conda env create -f environment.yml      # one-time; creates env "scipe-ldm"
 conda activate scipe-ldm
 ```
 > `download_checkpoint.sh` uses the `gh` CLI if available, otherwise `wget`.
-> Edit the `REPO`/`TAG` lines at the top of the script to match where you
-> uploaded the release asset (or pass them as env vars).
+> It is preset to `jiaweish23/HIDSI_workshop`, release tag `checkpoints`
+> (override with `REPO=... TAG=...` env vars if you fork).
 The notebook is **inference only** and runs in seconds per step on a GPU — fine on
 an interactive GPU session. It also runs on CPU (slower). Do **not** run heavy
 training on the login node; that goes through `sbatch` (see section 9).
